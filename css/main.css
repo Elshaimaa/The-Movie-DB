@@ -22,11 +22,16 @@
     font-weight: bold;
     cursor: pointer;
 }
-.listBar, .copyRightDiv{
+.copyRightDiv{
     padding: 30px;
 }
+.listBar{
+    padding-left: 25px;
+}
 .listBar li{
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
+    padding-top: 500px;
+    opacity: 0;
     cursor: pointer;
 }
 .listBar li a{
@@ -73,3 +78,7 @@
     --animate-duration: 0.5s;
     --animation-delay: 00.5s;
   }
+.listBarHolder{
+    height: 300px;
+    overflow: hidden;
+}

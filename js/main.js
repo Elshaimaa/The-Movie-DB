@@ -5,10 +5,8 @@ $('.xIcon').click(function(){
 		$('.xIcon').html('<i class="iconz closeOpenIcon fa-solid fa-bars fs-2"></i>')
 		$('.navList').animate({left:`-=${value}`},500);
 		$('.listBar').find('li').each(function(i){
-			var pos = Number(i)*2000;
-			var delayTime = "animate__delay-"+i+"s"
-			$(this).removeClass(`animate__fadeInUpBig`)
-			$(this).addClass(`animate__animated animate__fadeOutDownBig animate__faster ${delayTime}`)
+			var delayValue = 200*i;
+			$(this).delay(delayValue).animate({'opacity':'0','padding-top':'500px'},{duration:400, queue:true})
 		})
 	}
 	else{
@@ -16,10 +14,8 @@ $('.xIcon').click(function(){
 		$('.xIcon').html('<i class="iconz closeOpenIcon fw-bold fa fa-align-justify fa-times"></i>')
 		$('.navList').animate({left:`-=${value}`},500);
 		$('.listBar').find('li').each(function(i){
-			var pos = Number(i)*2000;
-			var delayTime = "animate__delay-"+i+"s"
-			$(this).addClass(`animate__animated animate__fadeInUpBig animate__faster ${delayTime}`)
-			$(this).removeClass(`animate__fadeOutDownBig`)
+			var delayValue = 200*i;
+			$(this).delay(delayValue).animate({'opacity':'1','padding-top':'25px'},{duration:400, queue:true})
 		})
 	}
 })
