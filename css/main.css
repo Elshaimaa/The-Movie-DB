@@ -1,0 +1,74 @@
+*{
+    /* padding: 0px !important;
+    margin: 0px !important; */
+}
+.navList{
+    width: 300px;
+    left: -236.837;
+    z-index: 3333;
+}
+.whiteBar{
+    width:80px;
+    background-color: #F8F6F6;
+}
+.xIcon{
+    top: calc(50% - 10px);
+}
+.fa{
+    font-size: 25px;
+    font-weight:900 !important;
+}
+.iconz {
+    font-weight: bold;
+    cursor: pointer;
+}
+.listBar, .copyRightDiv{
+    padding: 30px;
+}
+.listBar li{
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+.listBar li a{
+    text-decoration: none;
+    color: white;
+    font-weight: lighter;
+    transition: all 0.5s;
+}
+.blackBar p{
+    color: gray;
+}
+.media i{
+    font-size: 14px;
+    padding: 8px;
+    margin-bottom: 5px;
+    transition: all 0.5s;
+}
+.media i:hover, .listBar a:hover{
+    color:#FF655C;
+}
+.coverDiv{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.75);
+    transition: all 0.5s;
+    top:100%;
+    left: 0px;
+    right: 0px;
+}
+.blockDiv:hover .coverDiv{
+    top:0;
+}
+.warning{
+    padding: 15px 20px;
+    font-weight: 100;
+    background-color: #F8D7DA;
+}
+.contactInfo input{
+    padding: 10px;
+    font-size: 17px;
+    font-weight: 100;
+    color: white;
+}
+.animate__animated.animate__bounce {
+    --animate-duration: 0.5s;
+  }
