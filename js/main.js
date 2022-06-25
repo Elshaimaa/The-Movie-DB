@@ -3,17 +3,25 @@ $('.xIcon').click(function(){
 	if($('.blackBar').offset().left == 0){
 		var value = $('.blackBar').width();
 		$('.xIcon').html('<i class="iconz closeOpenIcon fa-solid fa-bars fs-2"></i>')
+		$('.navList').animate({left:`-=${value}`},500);
+		$('.listBar').find('li').each(function(i){
+			var pos = Number(i)*2000;
+			var delayTime = "animate__delay-"+i+"s"
+			$(this).removeClass(`animate__fadeInUpBig`)
+			$(this).addClass(`animate__animated animate__fadeOutDownBig animate__faster ${delayTime}`)
+		})
 	}
 	else{
 		var value = $('.blackBar').width()*-1;
 		$('.xIcon').html('<i class="iconz closeOpenIcon fw-bold fa fa-align-justify fa-times"></i>')
+		$('.navList').animate({left:`-=${value}`},500);
+		$('.listBar').find('li').each(function(i){
+			var pos = Number(i)*2000;
+			var delayTime = "animate__delay-"+i+"s"
+			$(this).addClass(`animate__animated animate__fadeInUpBig animate__faster ${delayTime}`)
+			$(this).removeClass(`animate__fadeOutDownBig`)
+		})
 	}
-	$('.navList').animate({left:`-=${value}`},500);
-	$('listBar').find('li').each(function(i){
-		var pos = i*20;
-		alert(i)
-		$('this').animate({top:`${pos}`},500)
-	})
 })
 $('.nowPlaying').click(function(){
 	displayMoviesFromCategory("movie/now_playing")

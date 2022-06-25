@@ -69,6 +69,7 @@
     font-weight: 100;
     color: white;
 }
-.animate__animated.animate__bounce {
+.animate__animated{
     --animate-duration: 0.5s;
+    --animation-delay: 00.5s;
   }
